@@ -94,7 +94,7 @@ button {
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 480px){
     .container{
         display: flex;
         flex-direction: column;
@@ -134,6 +134,7 @@ button {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: 16px;
     }
 
     #grid-container {

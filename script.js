@@ -14,21 +14,22 @@ function makeGrid(){
 
 makeGrid();
 
+
 const userInput = document.getElementById('number');
 
 function updateGrid(){
     if(userInput.value <= 100 && userInput.value > 0){
-    gridContainer.innerHTML = '';
-    gridContainer.style.gridTemplateColumns = `repeat(${userInput.value}, 1fr)`;
-    gridContainer.style.gridTemplateRows = `repeat(${userInput.value}, 1fr)`;
-    for(let i = 0; i < (userInput.value * userInput.value); i++){
-        const div = document.createElement('div');
-        gridContainer.appendChild(div).className = 'grid-item';
-        div.addEventListener('mouseover', squareColor);
+        gridContainer.innerHTML = '';
+        gridContainer.style.gridTemplateColumns = `repeat(${userInput.value}, 1fr)`;
+        gridContainer.style.gridTemplateRows = `repeat(${userInput.value}, 1fr)`;
+        for(let i = 0; i < (userInput.value * userInput.value); i++){
+            const div = document.createElement('div');
+            gridContainer.appendChild(div).className = 'grid-item';
+            div.addEventListener('mouseover', squareColor);
+        }
+    }else{
+        alert('Only type a value from 1 - 100');
     }
-}else{
-    alert('Only type a value from 1 - 100');
-}
 }
 
 userInput.addEventListener('change', updateGrid);
