@@ -31,9 +31,21 @@ function updateGrid(){
 }
 }
 
+userInput.addEventListener('change', updateGrid);
+
 const color = document.getElementById('color');
 
 function squareColor(e){
     let chooseColor = color.value;
     e.target.style.backgroundColor = chooseColor;
 }
+
+const reset = document.getElementById('reset');
+
+reset.addEventListener('click', function(){
+    gridContainer.innerHTML = '';
+    userInput.value = '';
+    gridContainer.style.gridTemplateColumns = 'repeat(16, 1fr)';
+    gridContainer.style.gridTemplateRows = 'repeat(16, 1fr)';
+    makeGrid();
+})
