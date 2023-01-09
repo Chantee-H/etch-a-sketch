@@ -8,6 +8,7 @@ function makeGrid(){
     for(let i = 0; i < 256; i++){
         const div = document.createElement('div');
         gridContainer.appendChild(div).className = 'grid-item';
+        div.addEventListener('mouseover', squareColor);
     }
 }
 
