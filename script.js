@@ -30,3 +30,10 @@ function updateGrid(){
     alert('Only type a value from 1 - 100');
 }
 }
+
+const color = document.getElementById('color');
+
+function squareColor(e){
+    let chooseColor = color.value;
+    e.target.style.backgroundColor = chooseColor;
+}
